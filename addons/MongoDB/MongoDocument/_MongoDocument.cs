@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class _MongoDocument : Node
+public partial class _MongoDocument : Node
 {
 
     

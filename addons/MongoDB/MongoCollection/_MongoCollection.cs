@@ -8,7 +8,7 @@ using MongoDB.Driver;
 using MongoDB.Driver.Core;
 using MongoDB.Bson.IO;
 
-public class _MongoCollection : Node
+public partial class _MongoCollection : Node
 {
 	private IMongoCollection<BsonDocument> BsonCollection;
 	private Dictionary JsonCollection;

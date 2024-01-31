@@ -6,7 +6,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Core;
 
-public class _MongoDatabase : Node
+public partial class _MongoDatabase : Node
 {
 
     private IMongoDatabase database;
@@ -33,7 +33,7 @@ public class _MongoDatabase : Node
         _MongoCollection CollectionScene = null;
         if (!HasNode(collectionName)) {
             var MongoCollectionScene = (PackedScene) ResourceLoader.Load(addonPath+"MongoCollection/MongoCollection.tscn");
-            CollectionScene = (_MongoCollection)MongoCollectionScene.Instance();
+            CollectionScene = (_MongoCollection)MongoCollectionScene.Instantiate();
             AddChild(CollectionScene);
             CollectionScene.LoadCollection(collection, addonPath);
             CollectionScene.Name = collectionName;
